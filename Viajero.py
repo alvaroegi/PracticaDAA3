@@ -21,6 +21,9 @@ def matrizDistancias(ciudades):
                     sol[j][i] = dist
     return sol
 
+#Consideramos las ciudades como un grafo, todas conectadas entre sí y ponderado con la distancia de cada ciudad a la siguiente.
+#Por lo tanto, la solució va a ser considerado la matriz de distancias como la de adyacencia de nuestro grafo, encontrar ciclos
+#hamiltonianos, y de esos ciclos, encontrar el de camino mínimo, y esa es la solución buscada
 def viajero_wrapper(grafo):
     num_nodes = len(grafo)
     permuta = [None] * (num_nodes + 1)
