@@ -1,7 +1,7 @@
 contador = 0
 
 def genera_subconjuntos(i,sol,elementos,size):
-    if sum(sol[:i]) > size:
+    if sum(sol[:i]) > size: #PODA
         return
     if i==len(elementos):
         esDivisor(sol,elementos,size)
